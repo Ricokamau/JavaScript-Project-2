@@ -1,0 +1,16 @@
+function generateFibonacci(terms) {
+    let fibonacciSequence = [];
+    
+    if (terms === 1) {
+        fibonacciSequence.push(0);
+    } else if (terms >= 2) {
+        fibonacciSequence.push(0, 1);
+        
+        for (let i = 2; i < terms; i++) {
+            let nextTerm = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
+            fibonacciSequence.push(nextTerm);
+        }
+    }
+    
+    return fibonacciSequence;
+}
